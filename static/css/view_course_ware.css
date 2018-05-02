@@ -1,0 +1,68 @@
+.navbar a {
+  color: deepskyblue;
+}
+.nav-item{
+    margin:30px 10px;
+    font-size:20px;
+}
+.navbar-nav li{
+  list-style:none;
+}
+.nav_cs {
+  position:fixed;
+  top:20px;
+  right:30px;
+  font-size: 20px;
+}
+.nav_cs li{
+  list-style: none;
+}
+.nav_cs a{
+  color: deepskyblue;
+}
+.container{
+  text-align: center;
+  color: deepskyblue;
+  position: relative;
+  top: 70px;
+  right: auto;
+  left: auto;
+}
+.Huifold .item {
+  position: relative;
+  top: 120px;
+  left: 26%;
+  max-width: 45%;
+  list-style: none;
+}
+.Huifold .item h4{
+  margin:0;
+  font-weight:bold;
+  position:relative;
+  border-top: 1px solid #fff;
+  font-size:15px;
+  line-height:22px;
+  padding:7px 10px;
+  background-color:#eee;
+  cursor:pointer;
+  padding-right:30px
+}
+.Huifold .item h4 b{
+  position:absolute;
+  display: block;
+  cursor:pointer;
+  right:10px;
+  top:7px;
+  width:16px;
+  height:16px;
+  text-align:center;
+  color:#666
+}
+.Huifold .item .info{
+  display:none;
+  padding:10px
+}
+.Huifold .info {
+  font-size: 20px;
+  color: deepskyblue;
+}

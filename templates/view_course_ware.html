@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="../static/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../static/images/favicon.ico" type="image/x-icon">
+    <title> 元智校内网</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/background_all.css">
+    <link rel="stylesheet" href="../static/css/view_course_ware.css">
+    <script type="application/javascript" src="../static/js/jquery.js"></script>
+    <script type="application/javascript" src="../static/js/view_course_ware.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+    <ul class="navbar-nav">
+        <li>
+            <img src="../static/images/32x51.ico" alt="Logo">
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'publish_tasks' %}">作业主页</a>
+        </li>
+{#        <li class="nav-item">#}
+{#            <a class="nav-link" href="{% url 'view_the_degree_of_completion_tch' %}">作业完成度</a>#}
+{#        </li>#}
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'view_course_ware' %}">查看课件</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'search_interview_questions' %}">查看面试题</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'cuotiji' %}">面试错题集</a>
+        </li>
+    </ul>
+</nav>
+<div class="nav_cs">
+    <ul>
+        <li>
+            <p>{{ en_name }}</p>
+            <a href="{% url 'logout_tch' %}">注销</a>
+        </li>
+    </ul>
+</div>
+<div class="container">
+    <h1>
+        课件存放
+    </h1>
+</div>
+<div>
+    <ul id="Huifold1" class="Huifold">
+        {% for file in files %}
+            <li class="item">
+                <a href="{{ MEDIA_URL }}{{ file.file }}">{{ forloop.counter }}、{{ file.pub_time }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" href="../static/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../static/images/favicon.ico" type="image/x-icon">
+    <title>元智校内网</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../static/css/background_all.css">
+    <link rel="stylesheet" href="../static/css/cheack_answer.css">
+    <script type="text/javascript" src="../static/js/cheack_answer.js"></script>
+</head>
+<body onLoad="goPage(1,1);">
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <ul class="navbar-nav">
+            <li>
+                <img src="../static/images/32x51.ico" alt="Logo">
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'publish_tasks' %}">作业发布</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'view_course_ware' %}">上传课件</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'view_the_degree_of_completion_tch' %}">作业完成度</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'publish_interviewquestions' %}">发布面试题</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'inspact_answer' %}">批改面试题</a>
+            </li>
+
+        </ul>
+    </nav>
+    <div class="nav_css">
+        <ul>
+            <li>
+                <p>{{ en_name }}</p>
+                <a href="{% url 'logout_tch' %}"> 注销</a>
+            </li>
+        </ul>
+    </div>
+<div class="nav">
+    <h4>
+        批改面试题目
+    </h4>
+</div>
+<div class="container">
+    <form action="{% url 'submit_modify_content' %}" method="POST">{% csrf_token %}
+        <table id="idData" width="55%">
+            {% for question in question_list %}
+                <tr>
+                    <td>
+                        <h3>{{ forloop.counter }}.{{ question.title }}</h3>
+                        <p>{{ question.content }}</p>
+                        学生答案：<p>{{ question.submit_answer }}</p>
+                        <input type="hidden" name="title" value="{{ question.title }}">
+                        是否正确<input type="checkbox" name='is_right' value="1">
+                        <p>
+                            ------------------------------------------------------------------分割线-----------------------------------------------</p>
+                        <textarea name="answer" id="" cols="100" rows="10"></textarea>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+        <table width="60%" align="right">
+            <tr>
+                <td>
+                    <div id="barcon" class="barcon"></div>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>

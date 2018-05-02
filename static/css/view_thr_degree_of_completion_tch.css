@@ -1,0 +1,51 @@
+  .float-left{
+		float:left;
+		margin:50px 60px;
+  }
+  .navbar a {
+      color: #00868B;
+  }
+  .nav-item{
+		margin:30px 10px;
+		font-size:20px;
+  }
+  .navbar-nav li{
+      list-style:none;
+  }
+  .first{
+		margin-left:39%;
+  }
+  .panel-group{
+		width:50%;
+		margin-left:25%;
+		margin-bottom:60px;
+  }
+  .sel_color{
+      width: 65px;
+      height: 25px;
+      color: white;
+      background: steelblue;
+  }
+  .con_color{
+      color: white;
+      background: steelblue;
+  }
+  .font_sz{
+      text-align: center;
+      font-size: 20px;
+  }
+  .text-info li{
+      list-style:none;
+  }
+  .text-info a {
+      color: #000000;
+  }
+  .nav_cs {
+      position:fixed;
+      top:20px;
+      right:30px;
+      font-size: 20px;
+  }
+  .nav_cs li{
+      list-style: none;
+  }

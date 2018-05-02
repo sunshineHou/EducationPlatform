@@ -1,0 +1,33 @@
+.navbar a {
+  color: deepskyblue;
+}
+.nav-item{
+    margin:30px 10px;
+    font-size:20px;
+}
+.navbar-nav li{
+  list-style:none;
+}
+.nav_css {
+  position:fixed;
+  top:40px;
+  right:40px;
+  font-size: 20px;
+}
+.nav_css p {
+  position:fixed;
+  top:40px;
+  right:95px;
+  font-size: 20px;
+}
+.nav_css li{
+  list-style: none;
+}
+.nav {
+    font-size: 35px;
+    color: deepskyblue;
+    text-align: center;
+}
+.container {
+    text-align: center;
+}

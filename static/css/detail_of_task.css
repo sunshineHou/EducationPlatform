@@ -1,0 +1,63 @@
+.navbar a {
+  color: #00868B;
+}
+.nav-item{
+    margin:30px 10px;
+    font-size:20px;
+}
+.navbar-nav li{
+  list-style:none;
+}
+.nav_css {
+  position:fixed;
+  top:40px;
+  right:40px;
+  font-size: 20px;
+}
+.nav_css p {
+  position:fixed;
+  top:40px;
+  right:95px;
+  font-size: 20px;
+}
+.nav_css li{
+  list-style: none;
+}
+.tit_cs {
+    text-align: center;
+}
+.tit_cs h2 {
+    position: relative;
+    top: 50px;
+    color: deepskyblue;
+}
+.file_cs h3 {
+    color: deepskyblue;
+}
+.file_cs p {
+    color: black;
+    font-size: 20px;
+}
+.btn_cs {
+    text-align: center;
+}
+.file {
+    position: relative;
+    display: inline-block;
+    border-radius: 4px;
+    padding: 4px 12px;
+    overflow: hidden;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 20px;
+}
+.file_cs {
+    text-align: center;
+    margin: 10%;
+}
+.file_cs p {
+    position: relative;
+    left: 20%;
+    width: 60%;
+    text-align: left;
+}

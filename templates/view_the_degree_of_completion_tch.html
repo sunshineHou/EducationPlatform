@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" href="../static/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../static/images/favicon.ico" type="image/x-icon">
+    <title> 元智校内网</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/background_all.css">
+    <link rel="stylesheet" href="../static/css/view_thr_degree_of_completion_tch.css">
+    <script src="../static/js/jquery.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+    <ul class="navbar-nav">
+        <li>
+            <img src="../static/images/32x51.ico" alt="Logo">
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'view_all_tasks' %}">作业主页</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'view_course_ware' %}">查看课件</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'view_the_degree_of_completion_tch' %}">作业完成度</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'search_interview_questions' %}">面试题作业</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'cuotiji' %}">面试错题集</a>
+        </li>
+    </ul>
+</nav>
+<div class="nav_css">
+    <ul>
+        <li>
+            <p>{{ en_name }}</p>
+            <a href="{% url 'logout_tch' %}"> 注销</a>
+        </li>
+    </ul>
+</div>
+<div style="text-align:center;">
+    <h2 class="text-info">作业完成度</h2>
+    <div>
+        <div class="float-left first">
+            <form action="#">
+                <select class="sel_color" name="class_name" id="">
+                    <option value='#'>班级</option>
+                    <option value='#'>元智一班</option>
+                    <option value='#'>元智二班</option>
+                </select>
+            </form>
+        </div>
+        <div class="float-left">
+            <form action="#">
+                <select class="sel_color" name="created_time" id="">
+                    <option value="#">时间</option>
+                    <option value="#">2018-02-08 &nbsp</option>
+                </select>
+            </form>
+        </div>
+    </div>
+</div>
+<div style="clear:both;"></div>
+<div class="text-info" style="text-align: center">
+    <h4>完成 {{ 1 }} 人</h4>
+    <h4>未完成 {{ 0 }} 人</h4>
+</div>
+<div class="text-info font_sz">
+    <h2 style="text-align: center">已完成学生名单</h2>
+    <ul>
+        <li>
+            <a href="{% url 'view_detail_of_completion_tch' %}">dengguo</a>
+
+        </li>
+    </ul>
+    <br>
+    <h2 style="text-align: center">未完成学生名单</h2>
+    <ul>
+        <li>
+        </li>
+    </ul>
+</div>
+</body>
+</html>
