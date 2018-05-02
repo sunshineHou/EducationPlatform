@@ -1,0 +1,96 @@
+/*背景，可以不用看，对前端感兴趣的同学可以深入了解*/
+body {
+    -webkit-animation: theme 21s linear infinite;
+    animation: theme 21s linear infinite;
+    font-family: "华文细黑";
+}
+body:after, body:before {
+    content: '';
+    display: block;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    width: 100vmax;
+    height: 100vmax;
+    background: rgba(0, 0, 0, 0.05);
+    -webkit-animation: background 90s linear infinite;
+    animation: background 90s linear infinite;
+}
+body:after {
+    left: 15vw;
+}
+body:before {
+    right: 15vw;
+    -webkit-animation-delay: -30s;
+    animation-delay: -30s;
+    animation-direction: reverse;
+}
+@-webkit-keyframes theme {
+    0% {
+        background: #f1e1f8;
+    }
+    16% {
+        background: #f9f7c4;
+    }
+    33% {
+        background: #a4f0f7;
+    }
+    50% {
+        background: #ace0f6;
+    }
+    66% {
+        background: #bfe7ed;
+    }
+    83% {
+        background: #e4f6f9;
+    }
+    100% {
+        background: #bcfad2;
+    }
+}
+
+@keyframes theme {
+    0% {
+        background: #f1e1f8;
+    }
+    16% {
+        background: #f9f7c4;
+    }
+    33% {
+        background: #a4f0f7;
+    }
+    50% {
+        background: #ace0f6;
+    }
+    66% {
+        background: #bfe7ed;
+    }
+    83% {
+        background: #e4f6f9;
+    }
+    100% {
+        background: #bcfad2;
+    }
+}
+@-webkit-keyframes background {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes background {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}

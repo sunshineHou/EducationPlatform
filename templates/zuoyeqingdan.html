@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" href="../static/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../static/images/favicon.ico" type="image/x-icon">
+    <title> 元智校内网</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/background_all.css">
+    <link rel="stylesheet" href="../static/css/zuoyeqingdan.css">
+    <script src="../static/js/jquery.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+    <ul class="navbar-nav">
+        <li>
+            <img src="../static/images/32x51.ico" alt="Logo">
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'publish_tasks' %}">作业发布</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'upload' %}">上传课件</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'view_the_degree_of_completion_tch' %}">作业完成度</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'publish_interviewquestions' %}">发布面试题</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">批改面试题</a>
+        </li>
+    </ul>
+</nav>
+<div class="nav_css">
+    <ul>
+        <li>
+            <p>{{ en_name }}</p>
+            <a href="{% url 'logout_tch' %}"> 注销</a>
+        </li>
+    </ul>
+</div>
+<div class="top_nav">
+    <h2>作业清单</h2>
+</div>
+<div>
+    <ul id="Huifold1" class="Huifold">
+        <li class="item">
+            {% for question in questions %}
+                <form id="{{ forloop.counter }}" action="{% url 'modify_answer' %}" method="GET">{% csrf_token %}
+                    <h4>{{ question.created_time|date:'Y-m-d' }}
+                        <input type="hidden" name="create_time"
+                               value="{{ create_time }}{{ question.created_time|date:'Y-m-d h:m:s' }}"/>
+                        <input type="hidden" name="course" value="{{ course }}{{ question.category }}"/>
+                        <input type="hidden" name="all_info"
+                               value="
+
+
+                                       {{ all_info }}{{ question.created_time|date:'Y-m-d h:m:s' }} {{ question.category }}"/>
+                        <a onclick="document.getElementById('{{ forloop.counter }}').submit();">
+                            {{ question.category }}-第{{ question.id }}次面试题目练习
+                        </a>
+                    </h4>
+                </form>
+            {% endfor %}
+        </li>
+    </ul>
+</div>
+</body>
+</html>

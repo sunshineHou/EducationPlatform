@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="../static/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../static/images/favicon.ico" type="image/x-icon">
+    <title> 元智校内网</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../static/css/background_all.css">
+    <link rel="stylesheet" href="../static/css/search_question_detail.css">
+{#    <script type="text/javascript" src="../static/js/search_question_detail.js"></script>#}
+</head>
+<body>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <ul class="navbar-nav">
+            <li>
+                <img src="../static/images/32x51.ico" alt="Logo">
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'publish_tasks' %}">作业主页</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'view_the_degree_of_completion_tch' %}">作业完成度</a>
+            </li>
+             <li class="nav-item">
+                <a class="nav-link" href="{% url 'upload' %}">查看课件</a>
+            </li>
+             <li class="nav-item">
+                <a class="nav-link" href="{% url 'search_interview_questions' %}">查看面试题</a>
+            </li>
+             <li class="nav-item">
+                <a class="nav-link" href="{% url 'cuotiji' %}">面试错题集</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="nav_css">
+          <ul>
+              <li>
+                <p>{{ en_name }}</p>
+                <a href="{% url 'logout_tch' %}">注销</a>
+              </li>
+          </ul>
+    </div>
+    <div class="nav">
+        <h3>
+            {{ all_info }}
+        </h3>
+    </div>
+    <div class="container">
+        <form id="answer_form" action="" method="POST">{% csrf_token %}
+            <table id="idData" width="55%">
+                {% for interviewCorrecting in interviewCorrectings %}
+                    <h4>{{ interviewCorrecting.created_time }}</h4>
+                    <tr>
+                        <td>
+                            <p>{{ forloop.counter }}.{{ interviewCorrecting.title }}</p>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+            <table width="60%" align="right">
+                <tr><td><div id="barcon" name="barcon"></div></td></tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

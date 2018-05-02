@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="../static/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../static/images/favicon.ico" type="image/x-icon">
+    <title> 元智校内网</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/background_all.css">
+    <link rel="stylesheet" href="../static/css/upload.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <ul class="navbar-nav">
+            <li>
+                <img src="../static/images/32x51.ico" alt="Logo">
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'publish_tasks' %}">作业发布</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'upload' %}">上传课件</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'view_the_degree_of_completion_tch' %}">作业完成度</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'publish_interviewquestions' %}">发布面试题</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">批改面试题</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="nav_cs">
+        <ul>
+            <li>
+                <p>{{ en_name }}</p>
+                <a href="{% url 'logout_tch' %}"> 注销</a>
+            </li>
+        </ul>
+    </div>
+    <div class="container">
+        <h3 style="color: steelblue">
+            上传课件
+        </h3>
+        <form action="{% url 'upload' %}" enctype="multipart/form-data" method="post">
+            <input type="file" name="file" multiple="multiple">
+            <select name="to_class" id="">
+                {% for to_class in classes %}
+                    <option value="{{ to_class.name }}">{{ to_class.name }}</option>
+                {% endfor %}
+            </select>
+            <input type="submit" value="提交">
+            {% csrf_token %}
+        </form>
+    </div>
+</body>
+</html>

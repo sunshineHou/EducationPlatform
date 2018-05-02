@@ -1,0 +1,25 @@
+.text-info{
+    /*下外边距间隔50px*/
+    margin-bottom: 50px;
+    font-size: 30px;
+    text-align: center;
+}
+.float-left{
+    float: left;
+}
+.container{
+    /*将页面内容限制在中间*/
+    width: 60%;
+}
+.form-group{
+    height: 60px;
+}
+.high{
+    height: 180px;
+}
+.high p{
+    margin-bottom: 20px;
+}
+.info{
+    text-align: center;
+}
