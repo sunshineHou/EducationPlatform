@@ -1,0 +1,33 @@
+.float-left{
+    float:left;
+    margin:50px 60px;
+}
+.nav-item{
+    margin:20px;
+    font-size:20px;
+}
+.navbar-nav li{
+  list-style:none;
+}
+.nav_cs {
+  position:fixed;
+  top:20px;
+  right:30px;
+  font-size: 20px;
+}
+.nav_cs p {
+  position:fixed;
+  top:20px;
+  right:95px;
+  font-size: 20px;
+}
+
+.nav_cs li{
+  list-style: none;
+}
+.sel_color{
+    width: 65px;
+    height: 25px;
+    color: white;
+    background: SteelBlue;
+}

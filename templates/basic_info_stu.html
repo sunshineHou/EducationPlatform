@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" href="../static/images/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="../static/images/favicon.ico" type="image/x-icon">
+  <title>元智校内网</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../static/css/background_all.css">
+  <link rel="stylesheet" href="../static/css/basic_info_stu.css">
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+  <script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../static/js/basic_info_stu.js"></script>
+</head>
+<body>
+    <div class="container">
+        <p id="wrap">
+        <div id="navButton" class="closed">
+            <img src="../static/images/32x51.ico" alt="Logo">&nbsp&nbsp- 元智教育 -
+        </div>
+        </p>
+        <br>
+        <br>
+        <h4 class="text-info">学生个人信息</h4>
+        <form class="form-horizontal" action="{% url 'submit_register_info_stu' %}" method="POST">{% csrf_token %}
+            <!--将行内元素添加float-left可将元素变为同一行-->
+          <div class="form-group">
+            <label for="inputName" class="col-sm-2 control-label float-left">
+                <a data-toggle="tooltip" data-placement="top" title="真实姓名！">姓名</a>
+            </label>
+            <div class="col-sm-8 float-left">
+              <input type="text" class="form-control" id="inputName" placeholder="姓名" name="real_name">
+            </div>
+          </div>
+
+          <div class="form-group">
+                <p class="col-sm-2 float-left">手机号码</p>
+            <div class="col-sm-8 float-left">
+              <input type="text" class="form-control" id="inputPhone" placeholder="手机号码" name="mobile">
+            </div>
+          </div>
+
+            <div class="form-group">
+                <p class="col-sm-2 float-left">性别</p>
+              <div class="radio col-sm-8 float-left">
+                  &nbsp&nbsp&nbsp<input type="radio" name="gender" value="1" checked="checked">男
+                  &nbsp&nbsp&nbsp<input type="radio" name="gender" value="0" checked="checked">女
+              </div><br>
+          </div>
+
+            <div class="form-group">
+                <p class="col-sm-2 float-left"> 身高</p>
+            <div class="col-sm-8 float-left">
+              <input type="text" class="form-control" id="inputheight" placeholder="身高" name="height">
+            </div>
+          </div>
+
+            <div class="form-group">
+                <p class="col-sm-2 float-left">体重</p>
+            <div class="col-sm-8 float-left">
+              <input type="text" class="form-control" id="inputweight" placeholder="体重" name="weight">
+            </div>
+          </div>
+          <div class="form-group">
+                <a data-toggle="tooltip" data-placement="top" title="真实学历！" class="col-sm-2 float-left">学历</a>
+              <div class="radio col-sm-8 float-left">
+                  <!--尽量不要使用&nbsp，实现样式分离-->
+                  &nbsp&nbsp&nbsp<input type="radio" name="degree" value="high school" checked="checked">中专/高中
+                  &nbsp&nbsp&nbsp<input type="radio" name="degree" value="undergraduate" checked="checked">专科/本科
+                  &nbsp&nbsp&nbsp<input type="radio" name="degree" value="master" checked="checked">硕士研究生/硕士
+              </div><br>
+          </div>
+          <div class="form-group">
+              <p>学习经历</p>
+              <input class="form-control" type="text" name="learning" />
+          </div>
+            <br>
+          <div class="form-group">
+                <p>过敏史</p>
+              <input class="form-control" id="comment" type="text" name="allergies" />
+          </div>
+
+            <input type="hidden" name="en_name" value="{{ en_name }}" >
+            <input type="hidden" name="passwd" value="{{ passwd }}" >
+            <br>
+          <div class="form-group info">
+            <input class="btn btn-info" type="submit" value="注册">
+          </div>
+    </form>
+</div>
+</body>
+</html>

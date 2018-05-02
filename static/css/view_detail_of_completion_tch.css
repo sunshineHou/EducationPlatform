@@ -1,0 +1,80 @@
+.float-left{
+    float:left;
+    margin:50px 60px;
+}
+.nav-item{
+    margin:20px;
+    font-size:20px;
+}
+.navbar-nav li{
+  list-style:none;
+}
+.nav_cs {
+  position:fixed;
+  top:20px;
+  right:30px;
+  font-size: 20px;
+}
+.nav_cs p {
+  position:fixed;
+  top:20px;
+  right:95px;
+  font-size: 20px;
+}
+
+.nav_cs li{
+  list-style: none;
+}
+
+.first{
+    margin-left:27%;
+}
+
+.panel-group{
+    width:50%;
+    margin-left:25%;
+    margin-bottom:60px;
+}
+
+.sel_color{
+  width: 65px;
+  height: 25px;
+  color: white;
+  background: SteelBlue;
+}
+.con_color{
+  color: white;
+  background: SteelBlue;
+}
+.ul_cs .item {
+    position: relative;
+    top: 30%;
+    left: 26%;
+    max-width: 45%;
+    list-style: none;
+}
+.ul_cs .item {
+    margin:0;
+    font-weight:bold;
+    position:relative;
+    border-top: 1px solid #fff;
+    font-size:15px;
+    line-height:22px;
+    padding:7px 10px;
+    background-color:#eee;
+    cursor:pointer;
+    padding-right:30px
+}
+.ul_cs input {
+    position: absolute;
+    right: 2%;
+}
+.btn_cs {
+    position: relative;
+    right: 15px;
+    bottom: auto;
+    color: white;
+    background: steelblue;
+    width: 80px;
+    height: 30px;
+}

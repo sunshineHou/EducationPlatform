@@ -1,0 +1,44 @@
+.navbar a {
+  color: #00868B;
+}
+.nav-item{
+    margin:30px 10px;
+    font-size:20px;
+}
+.navbar-nav li{
+  list-style:none;
+}
+.nav_css {
+  position:fixed;
+  top:40px;
+  right:40px;
+  font-size: 20px;
+}
+.nav_css p {
+  position:fixed;
+  top:40px;
+  right:95px;
+  font-size: 20px;
+}
+.nav_css li{
+  list-style: none;
+}
+.container{
+    text-align: center;
+}
+.nav_cs {
+  position:fixed;
+  top:20px;
+  right:30px;
+  font-size: 20px;
+}
+.nav_cs p {
+  position:fixed;
+  top:20px;
+  right:95px;
+  font-size: 20px;
+}
+
+.nav_cs li{
+  list-style: none;
+}

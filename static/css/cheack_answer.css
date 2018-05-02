@@ -1,0 +1,30 @@
+#idData {
+	color: deepskyblue;
+}
+a{
+	text-decoration: none;
+}
+.nav {
+	font-size: 40px;
+	text-align: center;
+	color: deepskyblue;
+	position: relative;
+	top: 10%;
+}
+.container {
+	position: relative;
+	top: 10%;
+	left: 25%
+}
+.container h3 {
+	position: relative;
+	left: 42%;
+	font-size: 35px;
+}
+.container p {
+	font-size: 20px;
+}
+.container textarea {
+	position: relative;
+	left: 9%;
+}
