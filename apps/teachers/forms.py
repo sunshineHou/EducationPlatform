@@ -1,5 +1,5 @@
 #! /usr/bin/python3.6
-# @Author : changshiqi
+# @Author : sunshine
 
 """教师表单层
 """

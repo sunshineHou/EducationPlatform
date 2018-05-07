@@ -1,4 +1,5 @@
 #! /usr/bin/python3.6
-# @Author : changshiqi
+# @Author : sunshine
+
 
 default_app_config = 'teachers.apps.TeachersConfig'

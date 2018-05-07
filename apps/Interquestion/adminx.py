@@ -1,8 +1,7 @@
 #!/usr/bin/python3.6
 # _*_ coding: utf-8 _*_
-# @Author: changshiqi
+# @Author: sunshine
 # @Time: 18-1-29 下午10:05
-# @Name: adminx.py
 # @Software: PyCharm
 
 import xadmin

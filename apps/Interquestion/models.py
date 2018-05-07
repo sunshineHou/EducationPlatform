@@ -1,8 +1,7 @@
 #!/usr/bin/python3.6
 # _*_ coding: utf-8 _*_
-# @Author: changshiqi
+# @Author: sunshine
 # @Time: 18-1-27 下午4:42
-# @Name: 1.py
 # @Software: PyCharm
 
 """面试题库模型层

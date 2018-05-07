@@ -1,5 +1,5 @@
 #! /usr/bin/python3.6
-# @Author : changshiqi
+# @Author : sunshine
 
 """班级模型层
 """
