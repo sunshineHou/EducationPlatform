@@ -24,23 +24,6 @@
 .navbar-nav li{
   list-style:none;
 }
-.nav_cs {
-  position:fixed;
-  top:20px;
-  right:30px;
-  font-size: 20px;
-}
-.nav_cs p {
-  position:fixed;
-  top:20px;
-  right:95px;
-  font-size: 20px;
-}
-
-.nav_cs li{
-  list-style: none;
-}
-
 .first{
     margin-left:27%;
 }

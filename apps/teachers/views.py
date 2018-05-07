@@ -1,6 +1,6 @@
 #!/usr/bin/python3.6
 # -*- coding: utf-8 -*-
-# @Author : dengguo
+# @Author : sunshine
 
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, HttpResponse
@@ -27,9 +27,9 @@ class TchRegisterView(View):
         if tch_reg_form.is_valid():
             en_name = request.POST.get('en_name')
             passwd = request.POST.get('passwd')
-            print(en_name, passwd, '*' * 50)
+            # print(en_name, passwd, '*' * 50)
             teacher = Teacher.objects.filter(en_name__exact=en_name)
-            print(teacher, '&' * 100)
+            # print(teacher, '&' * 100)
             if teacher:  # 用户名已存在
                 return render(request, 'register_info_tea.html', {'msg': '用户名已存在'})
             return render(request, 'basic_info_tea.html', {'en_name': en_name,
@@ -79,7 +79,7 @@ class TchLoginView(View):
             if teachers:
                 for teacher in teachers:
                     result = check_password(passwd, teacher.passwd)
-                    print(result)
+                    # print(result)
                     if result == 1:
                         request.session['teacher_id'] = teacher.id
 

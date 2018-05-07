@@ -1,6 +1,6 @@
 #!/usr/bin/python3.6
 # -*- coding: utf-8 -*-
-# @Author : dengguo
+# @Author : sunshine
 
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, HttpResponse, RequestContext

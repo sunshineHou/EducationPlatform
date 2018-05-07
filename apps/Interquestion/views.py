@@ -1,6 +1,6 @@
 #!/usr/bin/python3.6
 # -*- coding: utf-8 -*-
-# @Author : dengguo
+# @Author : sunshine
 
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, HttpResponse
@@ -173,7 +173,7 @@ class ModifyView(View):
                     interviewQuestionBanks = InterviewQuestionBank.objects.filter(title=title)
                     for interviewQuestionBank in interviewQuestionBanks:
                         question_list.append(interviewQuestionBank)
-                        print('%%%%%%%%%%', question_list)
+                        # print('%%%%%%%%%%', question_list)
                 info = {
                     # 'answer_list': answer_list,
                     'question_list': question_list,
